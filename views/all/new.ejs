@@ -1,0 +1,42 @@
+<!-- views/fruits/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a Flavor</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <div class="block">
+    <a href="/">Home</a>
+    <a href="/all/new">About</a>
+    <a href="/all/new">Build Your Flavor</a>
+    <a href="/all/new">New Flavors</a>
+    <a href="/all/new">Contact Us</a>
+  </div>
+</head>
+
+<body>
+  <h1>Create your unique flavor today!</h1>
+  <form action="/all" method="POST">
+    <label for="id">ID:</label>
+    <input type="text" name="id" id="id" />
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" />
+
+    <label for="brand">Brand:</label>
+    <input type="text" name="brand" id="brand" />
+
+    <label for="price">Price:</label>
+    <input type="number" name="price" id="price" step="0.01" min="0" />
+
+    <!-- <label for="isReadyToEat">Are you in cafe and ready to eat?</label> -->
+    <!-- <input type="checkbox" name="isReadyToEat" id="isReadyToEat" /> -->
+
+    <button type="submit">Complete Order</button>
+  </form>
+</body>
+
+</html>

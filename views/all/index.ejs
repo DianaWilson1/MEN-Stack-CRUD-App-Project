@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ice Cream Index</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <div class="block">
+    <a href="/">Home</a>
+    <a href="/all/new">About</a>
+    <a href="/all/new">Build Your Flavor</a>
+    <a href="/all/new">New Flavors</a>
+    <a href="/all/new">Contact Us</a>
+  </div>
+</head>
+
+<body>
+  <h1>New Ice Cream Orders</h1>
+  <ul>
+    <% icecreams.forEach(icecream=> { %>
+      <li>
+        <a href="/all/<%= icecream._id %>">
+          <%= icecream.flavor %> - <%= icecream.toppings %>
+        </a>
+      </li>
+      <% }); %>
+  </ul>
+</body>
+
+</html>

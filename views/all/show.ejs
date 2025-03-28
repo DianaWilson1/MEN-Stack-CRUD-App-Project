@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= icecream.flavor %>
+  </title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <div class="block">
+    <a href="/">Home</a>
+    <a href="/all/new">About</a>
+    <a href="/all/new">Build Your Flavor</a>
+    <a href="/all/new">New Flavors</a>
+    <a href="/all/new">Contact Us</a>
+  </div>
+</head>
+
+<body>
+  <h1>
+    <%= icecream.flavor %> - <%= icecream.toppings %>
+  </h1>
+  <% if(icecream.isReadyToEat){ %>
+    <p>Ready to enjoy your ice cream!</p>
+    <% } else { %>
+      <p>Ice cream is still in the making!</p>
+      <% } %>
+        <div class="icecream-details">
+          <!-- Show specific ice cream details -->
+        </div>
+        <a class="icecream-index-link" href="/all">
+          Back to Ice Cream List
+        </a>
+        <div class="icecream-actions">
+          <form class="delete-form" action="/all/<%= icecream._id %>?_method=DELETE" method="POST">
+            <button class="delete-button" type="submit">
+              Delete <%= icecream.flavor %>
+            </button>
+          </form>
+          <a class="edit-link" href="/all/<%= icecream._id %>/edit">
+            <div class="edit-text">Edit <%= icecream.flavor %>
+            </div>
+          </a>
+        </div>
+</body>
+
+</html>

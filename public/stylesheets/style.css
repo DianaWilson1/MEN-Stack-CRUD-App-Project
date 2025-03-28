@@ -1,0 +1,271 @@
+ @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
+ body {
+   background: #FFF5F2;
+   display: flex;
+   flex-direction: column;
+   /* align-items: center;
+   justify-content: center; */
+   max-width: 100vw;
+   margin: 47px;
+ }
+
+ h1 {
+    color: #EE3B42;
+    font-size: 4.6rem;
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    /* margin-top: 8rem; */
+    margin-left: 47px;
+
+ }
+
+ footer {
+   font-size: 0.7em;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   padding: 10px;
+ }
+
+ .rabbit {
+       width: 707px;
+    /* border-radius: 200px; */
+    margin-top: -1rem;
+ }
+
+  .fruits-index-link {
+   text-decoration: none;
+ }
+
+ .index-link-text {
+   background-color: #ff00aa;
+   color: white;
+   font-size: 1.4em;
+   width: 10em;
+   padding: 5px 15px;
+   margin: 15px;
+   border-radius: 25px;
+   text-align: center;
+ }
+
+ .index-link-text:hover {
+   background-color: #5a029e;
+ }
+
+ .index-link-text:active {
+   background-color: #5c0040;
+ }
+
+  form {
+   font-family: "DM Sans", sans-serif;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   padding: 20px 30px;
+   border-radius: 20px;
+   margin: 20px 10px;
+ }
+
+ .checkbox-div {
+   flex-direction: row;
+ }
+
+ label,
+ input {
+   margin: 10px 2px 0 2px;
+ }
+
+ button {
+   align-self: center;
+   margin: 10px 4px 4px 4px;
+   background-color: #000000;
+   color: white;
+   padding: 5px 10px;
+   border-radius: 15px;
+   border: none;
+   width: 15em;
+ }
+
+ button:hover {
+   background-color: #000000;
+ }
+
+ button:active {
+   background-color: #000000;
+ }
+
+  .fruit-actions {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 130px;
+   padding: 20px 0;
+ }
+
+ .delete-form {
+   padding: 0;
+   box-shadow: 0 0;
+   background-color: transparent;
+   height: 50px;
+   margin: 0 20px 0 0;
+   min-height: 100%;
+ }
+ .delete-button {
+   background-color: #d40fdf;
+   text-transform: uppercase;
+   padding: 40px 15px;
+   width: 70%;
+   /* height: 100%; */
+   font-size: 1.3em;
+   margin: 0;
+   min-height: 100%;
+ }
+
+ .edit-link {
+   text-decoration: none;
+ }
+
+ .edit-text {
+   background-color: #b005ff;
+   text-transform: uppercase;
+   padding: 40px 15px;
+   font-size: 1.3em;
+   border-radius: 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   font-weight: bold;
+   text-align: center;
+   width: 70%;
+   height: 50px;
+ }
+
+ .delete-button:hover {
+   background-color: #2e00c7;
+ }
+
+ .delete-button:active {
+   background-color: rgb(223, 11, 247);
+ }
+
+ .edit-text:hover {
+   background-color: #3a0070;
+ }
+
+ .edit-text:active {
+   background-color: #ef00f7;
+   background-color: rgb(229, 114, 237);
+ }
+  /* index styling */
+
+ ul {
+   flex-wrap: wrap;
+ }
+
+ li {
+   list-style: none;
+ }
+
+ .fruit-cards {
+   display: flex;
+   flex-direction: column;
+   text-decoration: none;
+   color: black;
+   width: 40px;
+   height: 70px;
+   background-color: white;
+   margin: 10px 15px;
+   padding: 30px 50px;
+   border-radius: 15px;
+   align-items: center;
+   justify-content: center;
+   border: 2.5px solid #ffbd59;
+ }
+
+ .fruit-cards:hover {
+   border: 4px solid #f47b5b;
+ }
+
+ .fruit-cards:active {
+   background-color: #a4cf5f67;
+   border: 2.5px solid #ffbd59;
+   color: gray;
+ }
+
+ .index-header-div {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   width: 98%;
+ }
+
+ .add-fruit {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 20px;
+   text-decoration: none;
+   width: 6em;
+   text-transform: uppercase;
+   background-color: #769642;
+   border-radius: 30px;
+   color: white;
+   padding: 10px;
+   font-weight: bold;
+   font-size: 1.2em;
+ }
+
+ img {
+   height: 100%;
+   margin: 20px 0 0 0;
+ }
+ footer{
+  color: rgb(255, 0, 200)
+ }
+ a{
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  text-decoration: none;
+  margin-right: 51px;
+  color: black;
+  font-size: 24px;
+ }
+ .block{
+      align-items: center;
+    justify-content: center;
+    display: flex;
+    /* background: red; */
+
+ }
+ p{
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+    margin: 4rem;
+    margin-top: -28rem;
+ }
+ .block2{
+  display: flex;
+  gap: 10px;
+ }
+.first{
+  background-color: #FEDCBD;
+}
+.second{
+  background-color: #FFD1D1;
+      width: 500px;
+    height: 500px;
+    border-radius: 1000px;
+    font-family: "Alex Brush", cursive;
+  font-weight: 400;
+      font-size: 4rem;
+}
