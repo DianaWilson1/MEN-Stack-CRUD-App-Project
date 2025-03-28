@@ -66,7 +66,7 @@ app.get("/all/:decId", async (req, res) => {
     return res.status(404).send("Not Found");
   }
 
-  res.render("all/show.ejs", { dec: foundDec });
+  res.render("all/index.ejs", { dec: foundDec });
 });
 
 app.listen(3000, () => {
