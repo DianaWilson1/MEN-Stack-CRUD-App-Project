@@ -19,30 +19,55 @@
 
 <body>
   <h1>
-    <%= icecream.flavor %> - <%= icecream.toppings %>
+    <%= icecream.name %>
   </h1>
-  <% if(icecream.isReadyToEat){ %>
-    <p>Ready to enjoy your ice cream!</p>
-    <% } else { %>
-      <p>Ice cream is still in the making!</p>
-      <% } %>
-        <div class="icecream-details">
-          <!-- Show specific ice cream details -->
-        </div>
-        <a class="icecream-index-link" href="/all">
-          Back to Ice Cream List
-        </a>
-        <div class="icecream-actions">
-          <form class="delete-form" action="/all/<%= icecream._id %>?_method=DELETE" method="POST">
-            <button class="delete-button" type="submit">
-              Delete <%= icecream.flavor %>
-            </button>
-          </form>
-          <a class="edit-link" href="/all/<%= icecream._id %>/edit">
-            <div class="edit-text">Edit <%= icecream.flavor %>
-            </div>
-          </a>
-        </div>
+  <form action="/all/<%= icecream._id %>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <span id="name">
+      <%= icecream.name %>
+    </span>
+
+    <label for="brand">Brand:</label>
+    <span id="brand">
+      <%= icecream.brand %>
+    </span>
+
+    <label for="price">Price:</label>
+    <span id="price">
+      <%= icecream.price %>
+    </span>
+
+    <label for="flavor">Flavor:</label>
+    <span id="flavor">
+      <%= icecream.flavor %>
+    </span>
+
+    <label for="toppings">Toppings:</label>
+    <span id="toppings">
+      <%= icecream.toppings %>
+    </span>
+
+    <label for="isReadyToEat">Ready to Eat?</label>
+    <span id="isReadyToEat">
+      <%= icecream.isReadyToEat ? 'Yes' : 'No' %>
+    </span>
+
+  </form>
+
+
+  <div class="icecream-details">
+    <!-- Show specific ice cream details -->
+  </div>
+  <div class="icecream-actions">
+    <form class="delete-form" action="/all/<%= icecream._id %>?_method=DELETE" method="POST">
+      <button class="delete-button" type="submit">
+        Delete <%= icecream.flavor %>
+      </button>
+    </form>
+    <a class="edit-link" href="/all/<%= icecream._id %>/edit">
+      <div class="edit-text">Edit </div>
+    </a>
+  </div>
 </body>
 
 </html>

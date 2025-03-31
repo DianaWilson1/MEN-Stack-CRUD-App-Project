@@ -80,7 +80,6 @@
  }
 
  button {
-   align-self: center;
    margin: 10px 4px 4px 4px;
    background-color: #000000;
    color: white;
@@ -114,39 +113,47 @@
    box-shadow: 0 0;
    background-color: transparent;
    height: 50px;
-   margin: 0 20px 0 0;
    min-height: 100%;
  }
  .delete-button {
-   background-color: #d40fdf;
-   text-transform: uppercase;
-   padding: 40px 15px;
-   width: 70%;
-   /* height: 100%; */
-   font-size: 1.3em;
-   margin: 0;
-   min-height: 100%;
- }
+    background-color: #ff0067;
+    text-transform: uppercase;
+    padding: 20px 7px;
+        width: 35%;
+    height: 25px;
+    font-size: 0.95em;
+    margin: 0;
+    min-height: 50%;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   font-weight: bold;
+   text-align: center;
+   border-radius: 42px;
+}
+
 
  .edit-link {
    text-decoration: none;
  }
 
- .edit-text {
-   background-color: #b005ff;
+.edit-text {
+   background-color: #000000;
    text-transform: uppercase;
-   padding: 40px 15px;
-   font-size: 1.3em;
-   border-radius: 15px;
+   padding: 10px 5px;
+   font-size: 0.65em;
+ border-radius: 42px;
    display: flex;
    justify-content: center;
    align-items: center;
    color: white;
    font-weight: bold;
    text-align: center;
-   width: 70%;
-   height: 50px;
- }
+   width: 35%;
+   height: 25px;
+}
+
 
  .delete-button:hover {
    background-color: #2e00c7;

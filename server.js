@@ -55,7 +55,7 @@ app.get("/all/:decId", async (req, res) => {
   }
 
   const foundDec = await IceCream.findById(req.params.decId);
-  res.render("all/edit.ejs", { icecreams: [], icecream: foundDec || null });
+  res.render("all/show.ejs", { icecreams: [], icecream: foundDec || null });
 });
 
 app.delete("/all/:decId", async (req, res) => {
@@ -67,13 +67,13 @@ app.delete("/all/:decId", async (req, res) => {
   res.redirect("/all/index");
 });
 
-app.get("/all/:decId/edit", async (req, res) => {
+app.get("/all/:decId/show", async (req, res) => {
   try {
     const foundDec = await IceCream.findById(req.params.decId);
     if (!foundDec) {
       return res.status(404).send("Not Found");
     }
-    res.render("all/edit.ejs", { dec: foundDec });
+    res.render("all/show.ejs", { dec: foundDec });
   } catch (error) {
     console.error(error);
     res.status(500).send("Server Error");
