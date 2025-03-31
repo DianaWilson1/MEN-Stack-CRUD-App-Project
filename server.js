@@ -67,6 +67,7 @@ app.delete("/all/:decId", async (req, res) => {
   res.redirect("/all/index");
 });
 
+// Edit route for ice cream (edit.ejs page)
 app.get("/all/:decId/edit", async (req, res) => {
   if (!validateObjectId(req.params.decId)) {
     return res.status(400).send("Invalid ObjectId");
@@ -76,10 +77,11 @@ app.get("/all/:decId/edit", async (req, res) => {
   if (!foundDec) {
     return res.status(404).send("Not Found");
   }
-
   res.render("all/edit.ejs", { dec: foundDec });
+
 });
 
+// PUT route to update the ice cream data after editing
 app.put("/all/:decId", async (req, res) => {
   if (!validateObjectId(req.params.decId)) {
     return res.status(400).send("Invalid ObjectId");

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ice Cream Shop</title>
+  <link rel="stylesheet" href="./style-new-arrivals.css">
+  <script src="/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f8e0f0;
+      /* Light pink */
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      color: black;
+    }
+
+    nav {
+      background-color: #000000;
+      /* Black */
+      padding: 8px 16px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    #destinations {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    #actions {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    section {
+      height: 460px;
+      background-image: url('https://i.pinimg.com/736x/f4/7c/5d/f47c5d5fb47332f240429d35cbc4fb37.jpg');
+      color: black;
+      padding: 24px 72px;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 104px;
+      font-size: 58px;
+      font-family: "Lilita One", sans-serif;
+      color: #ff99cc;
+      /* Light pink */
+    }
+
+    h2 {
+      font-size: 16px;
+      margin-bottom: 0;
+      color: white;
+    }
+
+    input {
+      height: 58px;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 29px;
+      border: 0px;
+      padding: 0 24px;
+      display: block;
+    }
+
+    main {
+      background-color: white;
+      padding: 32px 72px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card-footer {
+      font-size: 14px;
+    }
+
+    .card-footer * {
+      margin-top: 8px;
+    }
+
+    nav button {
+      background-color: #ff99cc;
+      /* Light pink */
+      border-radius: 8px;
+      padding: 10px 16px;
+      border: 0;
+      color: #000000;
+      /* Black */
+      font-weight: 500;
+    }
+
+    .img-placeholder {
+      width: 355px;
+      height: 270px;
+      background-color: #f8e0f0;
+      /* Light pink */
+      border-radius: 8px;
+      background-image: url('https://i.pinimg.com/736x/65/9c/70/659c702a280d6a9fd8459a70a4ae47ab.jpg');
+    }
+
+    #trending p {
+      background-color: white;
+      color: black;
+      border-radius: 50px;
+      padding: 6px 15px;
+    }
+
+    #trending {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #hero {
+      display: flex;
+      column-gap: 20px;
+      flex-direction: column;
+      align-items: center;
+      gap: 100px;
+    }
+
+    a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+
+    button {
+      background-color: #ff99cc;
+      /* Light pink */
+      border-radius: 8px;
+      padding: 10px 16px;
+      border: 0;
+      color: #000000;
+      /* Black */
+      font-weight: 500;
+    }
+
+    #subnav {
+      padding: 32px 72px 0;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #subnav button {
+      border-radius: 8px;
+      padding: 10px 16px;
+      border: 1px solid black;
+      background-color: white;
+    }
+
+    #subnav button:hover {
+      background-color: #ff99cc;
+      /* Light pink hover */
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div id="destinations">
+      <a href="/index.html">Home</a>
+      <a href="sale.html">Ice Cream on Sale</a>
+      <a href="new-arrivals.html">New Ice Cream Flavors</a>
+      <a href="support.html">Support</a>
+    </div>
+  </nav>
+  <main>
+    <article class="card">
+      <div class="img-placeholder"></div>
+      <div class="card-footer">
+        <h3>Mint Chocolate Chip</h3>
+        <p>Price: $5.99</p>
+        <button>+</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="img-placeholder"></div>
+      <div class="card-footer">
+        <h3>Strawberry Cheesecake</h3>
+        <p>Price: $6.49</p>
+        <button>+</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="img-placeholder"></div>
+      <div class="card-footer">
+        <h3>Vanilla Bean</h3>
+        <p>Price: $4.99</p>
+        <button>+</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="img-placeholder"></div>
+      <div class="card-footer">
+        <h3>Chocolate Fudge Brownie</h3>
+        <p>Price: $5.99</p>
+        <button>+</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="img-placeholder"></div>
+      <div class="card-footer">
+        <h3>Cookie Dough</h3>
+        <p>Price: $5.49</p>
+        <button>+</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="img-placeholder"></div>
+      <div class="card-footer">
+        <h3>Salted Caramel</h3>
+        <p>Price: $6.00</p>
+        <button>+</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="img-placeholder"></div>
+      <div class="card-footer">
+        <h3>Pistachio Crunch</h3>
+        <p>Price: $6.49</p>
+        <button>+</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="img-placeholder"></div>
+      <div class="card-footer">
+        <h3>Caramel Swirl</h3>
+        <p>Price: $5.79</p>
+        <button>+</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="img-placeholder"></div>
+      <div class="card-footer">
+        <h3>Matcha Green Tea</h3>
+        <p>Price: $6.99</p>
+        <button>+</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="img-placeholder"></div>
+      <div class="card-footer">
+        <h3>Peanut Butter Cup</h3>
+        <p>Price: $6.25</p>
+        <button>+</button>
+      </div>
+    </article>
+  </main>
+</body>
+
+</html>
