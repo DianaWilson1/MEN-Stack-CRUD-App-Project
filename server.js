@@ -24,12 +24,12 @@ const validateObjectId = (id) => mongoose.Types.ObjectId.isValid(id);
 
 app.get("/", async (req, res) => {
   const icecreams = await IceCream.find();
-  res.render("index.ejs", { icecreams, dec: null }); // Fix, now dec is passed as null
+  res.render("index.ejs", { icecreams, dec: null });
 });
 
 app.get("/all/index", async (req, res) => {
   const icecreams = await IceCream.find();
-  res.render("all/index.ejs", { icecreams, dec: null }); // Fix, now dec is passed as null
+  res.render("all/index.ejs", { icecreams, dec: null });
 });
 
 app.get("/all/new", (req, res) => {
@@ -55,7 +55,7 @@ app.get("/all/:decId", async (req, res) => {
   }
 
   const foundDec = await IceCream.findById(req.params.decId);
-  res.render("all/index.ejs", { icecreams: [], dec: foundDec || null }); // Fix, now dec is passed
+  res.render("all/index.ejs", { icecreams: [], dec: foundDec || null });
 });
 
 app.delete("/all/:decId", async (req, res) => {
@@ -67,7 +67,6 @@ app.delete("/all/:decId", async (req, res) => {
   res.redirect("/all/index");
 });
 
-// Edit route for ice cream (edit.ejs page)
 app.get("/all/:decId/edit", async (req, res) => {
   if (!validateObjectId(req.params.decId)) {
     return res.status(400).send("Invalid ObjectId");
@@ -78,10 +77,8 @@ app.get("/all/:decId/edit", async (req, res) => {
     return res.status(404).send("Not Found");
   }
   res.render("all/edit.ejs", { dec: foundDec });
-
 });
 
-// PUT route to update the ice cream data after editing
 app.put("/all/:decId", async (req, res) => {
   if (!validateObjectId(req.params.decId)) {
     return res.status(400).send("Invalid ObjectId");
@@ -96,6 +93,17 @@ app.put("/all/:decId", async (req, res) => {
 
   await IceCream.findByIdAndUpdate(req.params.decId, req.body);
   res.redirect(`/all/${req.params.decId}`);
+});
+
+// Route for the menu page
+app.get("/menu", async (req, res) => {
+  const icecreams = await IceCream.find();
+  res.render("menu.ejs", { icecreams }); // Render the menu.ejs with ice cream data
+});
+
+// Route for the support page
+app.get("/support", (req, res) => {
+  res.render("support.ejs"); // Render the support.ejs page
 });
 
 app.listen(3000, () => {
