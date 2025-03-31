@@ -21,23 +21,11 @@
     <% icecreams.forEach(icecream=> { %>
       <li>
         <a href="/all/<%= icecream._id %>">
-          <%= icecream.flavor %> - <%= icecream.toppings %>
+          <%= icecream.name %> - <%= icecream.id %>
         </a>
       </li>
       <% }); %>
   </ul>
-
-  <% if (typeof dec !=="undefined" && dec) { %>
-    <h1>
-      <%= dec.name %>
-    </h1>
-    <p>Brand: <%= dec.brand %>
-    </p>
-    <p>Flavor: <%= dec.flavor %>
-    </p>
-    <% } else { %>
-      <!-- <p>Item not found</p> -->
-      <% } %>
 </body>
 
 </html>

@@ -6,6 +6,10 @@ const iceCreamSchema = new mongoose.Schema({
   flavor: String,
   isReadyToEat: Boolean,
   toppings: String,
+  name: String,
+  price: Number,
+  brand: String,
+
 });
 
 const IceCream = mongoose.model("IceCream", iceCreamSchema); // create model

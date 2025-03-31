@@ -17,12 +17,12 @@
 
 <body>
 
-  <h1>Edit Profile: <%= icecream.flavor %>
+  <h1>Order Information : <%= icecream.name %>
   </h1>
 
   <form action="/all/<%= icecream._id %>?_method=PUT" method="POST">
-    <label for="id">ID:</label>
-    <input type="text" name="id" id="id" value="<%= icecream._id %>" readonly />
+    <!-- <label for="id">ID:</label>
+    <input type="text" name="id" id="id" value="<%= icecream._id %>" readonly /> -->
 
     <label for="name">Name:</label>
     <input type="text" name="name" id="name" value="<%= icecream.name %>" required />
@@ -43,6 +43,8 @@
     <input type="checkbox" name="isReadyToEat" id="isReadyToEat" <%=icecream.isReadyToEat ? 'checked' : '' %> />
 
     <button type="submit">Update</button>
+    <button type="submit">Delete</button>
+
   </form>
 
   <a href="/all">Save and Back</a>
