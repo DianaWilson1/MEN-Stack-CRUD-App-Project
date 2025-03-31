@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/stylesheets/style.css" />
   <div class="block">
     <a href="/">Home</a>
-    <a href="/all/new">Menu</a>
+    <a href="/">Menu</a>
     <a href="/all/new">Build Your Flavor</a>
     <a href="/all/index">New Orders</a>
     <a href="/all/new">Contact Us</a>
@@ -26,6 +26,18 @@
       </li>
       <% }); %>
   </ul>
+
+  <% if (typeof dec !=="undefined" && dec) { %>
+    <h1>
+      <%= dec.name %>
+    </h1>
+    <p>Brand: <%= dec.brand %>
+    </p>
+    <p>Flavor: <%= dec.flavor %>
+    </p>
+    <% } else { %>
+      <p>Item not found</p>
+      <% } %>
 </body>
 
 </html>
