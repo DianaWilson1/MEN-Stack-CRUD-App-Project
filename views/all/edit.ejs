@@ -37,10 +37,10 @@
     <input type="text" name="flavor" id="flavor" value="<%= icecream.flavor %>" required />
 
     <label for="toppings">Toppings:</label>
-    <input type="text" name="toppings" id="toppings" value="<%= icecream.toppings %>" />
+    <input type="text" name="toppings" id="toppings" value="<%= icecream.toppings %>" required />
 
     <label for="isReadyToEat">Ready to Eat?</label>
-    <input type="checkbox" name="isReadyToEat" id="isReadyToEat" <%=icecream.isReadyToEat ? 'checked' : '' %> />
+    <input type="checkbox" name="isReadyToEat" id="isReadyToEat" <%=icecream.isReadyToEat ? 'checked' : '' %> required/>
 
     <button type="submit">Update</button>
     <!-- <button type="submit">Delete</button> -->

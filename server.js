@@ -93,7 +93,7 @@ app.put("/all/:decId", async (req, res) => {
   req.body.toppings = req.body.toppings || "None";
 
   await IceCream.findByIdAndUpdate(req.params.decId, req.body);
-  res.redirect(`/all/${req.params.decId}`);
+  // res.redirect(`/all/${req.params.decId}`);
 });
 
 // Route for the menu page
