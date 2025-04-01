@@ -49,13 +49,26 @@ app.post("/all", async (req, res) => {
   res.redirect("/all/index");
 });
 
-app.get("/all/:decId", async (req, res) => {
+app.get("/all/show/:decId", async (req, res) => {
   if (!validateObjectId(req.params.decId)) {
     return res.status(400).send("Invalid ObjectId");
   }
 
   const foundDec = await IceCream.findById(req.params.decId);
   res.render("all/show.ejs", { icecreams: [], icecream: foundDec || null });
+});
+
+app.get("/all/edit/:decId", async (req, res) => {
+  try {
+    const foundDec = await IceCream.findById(req.params.decId);
+    if (!foundDec) {
+      return res.status(404).send("Not Found");
+    }
+    res.render("all/edit.ejs", { icecream: foundDec });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
 });
 
 app.delete("/all/:decId", async (req, res) => {
@@ -65,19 +78,6 @@ app.delete("/all/:decId", async (req, res) => {
 
   await IceCream.findByIdAndDelete(req.params.decId);
   res.redirect("/all/index");
-});
-
-app.get("/all/:decId/show", async (req, res) => {
-  try {
-    const foundDec = await IceCream.findById(req.params.decId);
-    if (!foundDec) {
-      return res.status(404).send("Not Found");
-    }
-    res.render("all/show.ejs", { dec: foundDec });
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Server Error");
-  }
 });
 
 app.put("/all/:decId", async (req, res) => {
